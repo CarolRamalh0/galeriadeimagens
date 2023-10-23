@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #E6E6FA;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.main-header {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-family: 'Young Serif', serif;
+    font-size: 4em;
+    margin-bottom: 1.1em;
+    line-height: 1.2em;
+}
+
+.main-header h1 span {
+    color: #7B68EE;
+}
+
+.main-header p{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2em;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    background: #FFF0F5;
+    margin-bottom: 2em;
+}
+
+img {
+    width: 100%;
+}
+
+.card h3 {
+    font-family: 'Young Serif', serif;
+    margin-bottom: 2em;
+}
+
+.card div {
+    padding: 2em;
+}
+
+.card div p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.card:nth-child(even) img {
+    order: 2;
+}
+
+.btn {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 0.7em 1.8em;
+    margin-top: 2em;
+    cursor: default;
+}
+
+.btn:hover {
+    background-color: #8A2BE2;
+    box-shadow: 8px 8px 3px #000;
+    color: #000;
+}
+
+
+.galeria{ 
+    display: flex;
+    height: 20em;
+    margin: 2em;
+    gap: 0.5em;
+}
+
+.galeria div{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.galeria div:hover{
+    flex: 3;
+}
+
+
+.galeria:hover div:not(:hover) {
+    filter: blur(3px);
+    filter: grayscale(100%);
+} 
+
+footer{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #9370DB;
+    margin: 2em;
+}
